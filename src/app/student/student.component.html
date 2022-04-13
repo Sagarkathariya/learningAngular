@@ -1,0 +1,45 @@
+<section class="col-4 m-auto mt-lg-1 text-success">
+    <label for="StudentName" class="form-label text-info">Student Name:-</label>
+    <input [(ngModel)]="StudentObj.name " class="form-control col-2" required minlength="3" maxlength="50" type="text " /><br>
+    <label for="StudentAddress" class="form-label text-info">Student Address:-</label>
+    <input [(ngModel)]="StudentObj.address" class="form-control col-2" required minlength="3" maxlength="50" type="text" /><br>
+    <label for="StudentContact" class="form-label text-info">Student Contact:-</label>
+    <input [(ngModel)]="StudentObj.contact" class="form-control col-2" required maxlength="10" type="text" />
+    <label for="StudentAge" class="form-label text-info">Student Age:-</label>
+    <input [(ngModel)]="StudentObj.age" class="form-control col-2" required maxlength="2" type="text" />
+    <input type="button" [disabled]="!(StudentObj.isDirty)"  (click)="SaveStudent()" value="Save" class="mt-1 d-inline">
+    
+    
+    
+    
+     <!-- btn btn-primary mt-2 d-inline -->
+    <!-- [disabled]="!(StudentObj.isDirty)" -->
+    <!-- <input type="button" (click)="UpdateStudent()" value="Update" class="btn btn-primary mt-2"><br> -->
+</section>
+<!-- <section class="col-4 m-auto">
+    <b>{{StudentObj.name}}</b><br>
+    <b>{{StudentObj.address}}</b><br>
+    <b>{{StudentObj.contact}}</b>
+</section> -->
+<section class="col-5 m-auto mt-lg-1 mt-sm-1">
+    <table id=" center " class="table table-hover ">
+        <tr class="bg-secondary text-center fs-6">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Contact</th>
+            <th>Age</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let temp of StudentObjs; let i=index;" class="text-center">
+            <td>{{i+1}}</td>
+            <td>{{temp.name}}</td>
+            <td>{{temp.address}}</td>
+            <td>{{temp.contact}}</td>
+            <td [ngStyle]="{'background-color': temp.ageColor}">{{temp.age}}</td>
+            <td><a href="javascript:void(0);" (click)="EditStudent(temp)" class="btn btn-primary bg-primary btn-sm">Edit</a>&nbsp;
+                <a href="javascript:void(0);" (click)="DeleteStudent(temp)" class="btn btn-danger bg-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+    </table>
+</section>

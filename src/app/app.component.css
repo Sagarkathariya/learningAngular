@@ -1,0 +1,14 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+    
+  }
+  
+  main {
+    /* display: flex; */
+    flex-wrap: nowrap;
+    height: 100vh;
+    height: -webkit-fill-available;
+    max-height: 5000vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }

@@ -1,0 +1,41 @@
+<section class="col-5 m-auto mt-lg-1">
+    <label for="TeacherName" class="form-label text-info">Teacher Name:-</label>
+    <input [(ngModel)]="TeacherObj.name " class="form-control col-2" type="text " /><br>
+    <label for="TeacherAddress" class="form-label text-info">Teacher Address:-</label>
+    <input [(ngModel)]="TeacherObj.address" class="form-control col-2" type="text" /><br>
+    <label for="TeacherContact" class="form-label text-info">Teacher Contact:-</label>
+    <input [(ngModel)]="TeacherObj.contact" class="form-control col-2 " type="text" />
+    <label for="TeacherAge" class="form-label text-info">Teacher Age:-</label>
+    <input [(ngModel)]="TeacherObj.age" class="form-control col-2" required maxlength="2" type="text" />
+    <!-- <input type="button" (click)="AddTeacher()" value="Save" class="btn btn-primary mt-2 d-inline btn-sm">&nbsp; -->
+    <input type="button" (click)="AddTeacher()" value="Update" class="btn btn-primary mt-2 btn-sm">
+</section>
+<!-- <section class="col-4 m-auto">
+    <b>{{TeacherObj.name}}</b><br>
+    <b>{{TeacherObj.address}}</b><br>
+    <b>{{TeacherObj.contact}}</b>
+</section> -->
+<section class="col-6 m-auto mt-lg-1 mt-sm-1">
+    <table id=" center " class="table table-hover ">
+        <tr class="bg-secondary text-center fs-6">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Contact</th>
+            <th>Age</th>
+            <th>Action</th>
+
+        </tr>
+        <tr *ngFor="let temp of TeacherObjs let i=index;" class="text-center">
+            <td>{{i+1}}</td>
+            <td>{{temp.name}}</td>
+            <td>{{temp.address}}</td>
+            <td>{{temp.contact}}</td>
+            <td>{{temp.age}}</td>
+            <td><a href="javascript:void(0);" class="btn btn-primary bg-primary btn-sm">Edit</a>&nbsp;
+                <a href="javascript:void(0);"  class="btn btn-danger bg-danger btn-sm">Delete</a>
+            </td>
+
+        </tr>
+    </table>
+</section>
