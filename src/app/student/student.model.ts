@@ -8,6 +8,14 @@ export class Student{
     contact:string="";
     age:number=0; 
 }
+
+export class MasterStudent{
+  RollNumber:number=0;
+  email:string="";
+  password:string="";
+  status:number=0;
+
+}
 export class StudentViewModel extends Student{
   index: number=0;
   isNew:boolean=true;
@@ -39,13 +47,13 @@ export class StudentViewModel extends Student{
     return this.age;
   }
   set _age(value:number) {
-    this.isDirty=true;
+    // this.isDirty=true;
     this.age = value;
     if(value>16){
       this.ageColor = "Yellow";
     }
     if(value>16 && value<=50){
-      this.ageColor = "yellow";
+      this.ageColor = "Yellow";
     }
     if(value<=16){
       this.ageColor = "Red";

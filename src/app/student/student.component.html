@@ -7,7 +7,7 @@
     <input [(ngModel)]="StudentObj.contact" class="form-control col-2" required maxlength="10" type="text" />
     <label for="StudentAge" class="form-label text-info">Student Age:-</label>
     <input [(ngModel)]="StudentObj.age" class="form-control col-2" required maxlength="2" type="text" />
-    <input type="button" [disabled]="!(StudentObj.isDirty)"  (click)="SaveStudent()" value="Save" class="mt-1 d-inline">
+    <input type="button" [disabled]="(StudentObj.isDirty)"  (click)="SaveStudent()" value="Save" class="mt-1 d-inline">
     
     
     

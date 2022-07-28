@@ -56,7 +56,7 @@ export class StudentComponent implements OnInit {
   UpdateStudent(){
    var stEdit:StudentViewModel=this.StudentObjs[this.StudentObj.index];
     stEdit.name=this.StudentObj.name;
-    stEdit.address=this.StudentObj.address;
+    stEdit.address=this.StudentObj.address; 
     stEdit.contact=this.StudentObj.contact;
     stEdit.age=this.StudentObj.age;
     this.StudentObj=new StudentViewModel();

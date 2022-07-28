@@ -13,7 +13,7 @@
 <!-- <section class="col-4 m-auto">
     <b>{{TeacherObj.name}}</b><br>
     <b>{{TeacherObj.address}}</b><br>
-    <b>{{TeacherObj.contact}}</b>
+    <b>{{TeacherObj.contact}}</b>s
 </section> -->
 <section class="col-6 m-auto mt-lg-1 mt-sm-1">
     <table id=" center " class="table table-hover ">
@@ -32,8 +32,8 @@
             <td>{{temp.address}}</td>
             <td>{{temp.contact}}</td>
             <td>{{temp.age}}</td>
-            <td><a href="javascript:void(0);" class="btn btn-primary bg-primary btn-sm">Edit</a>&nbsp;
-                <a href="javascript:void(0);"  class="btn btn-danger bg-danger btn-sm">Delete</a>
+            <td><a href="javascript:void(0);" (click)="EditTeacher(temp)" class="btn btn-primary bg-primary btn-sm">Edit</a>&nbsp;
+                <a href="javascript:void(0);" (click)="DeleteTeacher(temp)" class="btn btn-danger bg-danger btn-sm">Delete</a>
             </td>
 
         </tr>

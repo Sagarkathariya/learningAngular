@@ -4,11 +4,13 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { AppRoutingModule, RoutingComponent } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { LibraryComponent } from './library/library.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-   RoutingComponent
+   RoutingComponent,
+   LibraryComponent
   ],
   imports: [
     BrowserModule,
